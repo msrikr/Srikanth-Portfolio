@@ -14,7 +14,7 @@ const Footer = () => {
           px: 2
         }}
       >
-        <Typography>Designed and Developed by Srikanth Kumar</Typography>
+        <Typography>Designed and Developed by Srikanth Kumar Maturu</Typography>
       </Box>
 
       <IconButton

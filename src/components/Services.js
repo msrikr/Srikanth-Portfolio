@@ -22,7 +22,7 @@ const Services = () => {
   return (
     <Box id="services" sx={{ py: 10, px: "10%" }}>
       <Typography variant="h3" textAlign="center">
-        My <span style={{ color: "#0ef" }}>Skills</span>
+        My <span style={{ color: "#0ef" }}>Projects</span>
       </Typography>
 
       <Grid container spacing={4} sx={{ mt: 5 }}>

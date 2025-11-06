@@ -108,7 +108,7 @@ const Skills = () => {
                 value={100}
                 size={120}
                 thickness={5}
-                sx={{ color: "#0ef" }}
+                sx={{ color: "black" }}
               />
               <Box
                 sx={{
