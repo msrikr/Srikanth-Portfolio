@@ -29,7 +29,7 @@ const Home = () => {
         backgroundColor: "#0a1b2c",
       }}
     >
-      <Box sx={{ maxWidth: "600px" }}>
+      <Box sx={{ marginTop: "20px" }}>
         <Typography variant="h5" sx={{ mb: 1 }}>
           Hello, It's
         </Typography>
