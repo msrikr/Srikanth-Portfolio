@@ -1,14 +1,22 @@
 import React from "react";
 import { Box, Typography, Grid, Paper, Button } from "@mui/material";
-import CodeIcon from '@mui/icons-material/Code';
-import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
-import MemoryIcon from '@mui/icons-material/Memory';
+import CodeIcon from "@mui/icons-material/Code";
+import IntegrationInstructionsIcon from "@mui/icons-material/IntegrationInstructions";
+import MemoryIcon from "@mui/icons-material/Memory";
 
 const Services = () => {
   const services = [
-    { icon: <CodeIcon sx={{ fontSize: 50 }} />, title: "Java Full Stack Developer" },
-    { icon: <IntegrationInstructionsIcon sx={{ fontSize: 50, color: "#00eeff" }} />, title: "MERN Stack Developer" },
-    { icon: <MemoryIcon sx={{ fontSize: 50, color: "#00eeff" }} />, title: "React Developer" },
+    { icon: <CodeIcon sx={{ fontSize: 50 }} />, title: "React.Js Developer" },
+    {
+      icon: (
+        <IntegrationInstructionsIcon sx={{ fontSize: 50, color: "#00eeff" }} />
+      ),
+      title: "MERN Stack Developer",
+    },
+    {
+      icon: <MemoryIcon sx={{ fontSize: 50, color: "#00eeff" }} />,
+      title: "React Developer",
+    },
   ];
 
   return (
@@ -28,13 +36,25 @@ const Services = () => {
                 borderRadius: 4,
                 boxShadow: "1px 1px 40px #0053b8f7",
                 textAlign: "center",
-                "&:hover": { transform: "translateY(-10px)", transition: ".5s" },
+                "&:hover": {
+                  transform: "translateY(-10px)",
+                  transition: ".5s",
+                },
               }}
             >
               {s.icon}
-              <Typography variant="h5" sx={{ my: 2 }}>{s.title}</Typography>
+              <Typography variant="h5" sx={{ my: 2 }}>
+                {s.title}
+              </Typography>
               <Typography variant="body1" sx={{ mb: 3 }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam perspiciatis fugit debitis.
+                Developed interactive, responsive UIs using React.js, Material
+                UI, and modern JavaScript (ES6+).Built and optimized reusable UI
+                components for a scalable and maintainable front-end
+                architecture.Enhanced application performance and load times by
+                30% through state management optimization (Redux, Context API).
+                Collaborated closely with UX/UI designers and backend developers
+                to ensure seamless API integration and consistent design
+                systems.
               </Typography>
               <Button
                 variant="contained"

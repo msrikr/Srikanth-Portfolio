@@ -32,7 +32,7 @@ const Contact = () => {
 
           <Stack spacing={1} sx={{ mt: 4 }}>
             <Typography sx={{ display: "flex", alignItems: "center" }}>
-              <Email sx={{ color: "#0ef", mr: 1 }} /> srikanthmaturu88@gmail.com
+              <Email sx={{ color: "#0ef", mr: 1 }} /> srikanthkumarreddy.m@gmail.com
             </Typography>
             <Typography sx={{ display: "flex", alignItems: "center" }}>
               <Phone sx={{ color: "#0ef", mr: 1 }} /> 8179130242
@@ -49,7 +49,7 @@ const Contact = () => {
             <IconButton href="https://whatsapp.com" sx={{ color: "#0ef" }}>
               <WhatsApp />
             </IconButton>
-            <IconButton href="https://linkedin.com" sx={{ color: "#0ef" }}>
+            <IconButton href="www.linkedin.com/in/srikanth-kumar-reddy-maturu" sx={{ color: "#0ef" }}>
               <LinkedIn />
             </IconButton>
           </Stack>

@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <AppBar position="fixed" sx={{ backgroundColor: "#051129", px: 4, py: 1, boxShadow: "none", zIndex:1300 }}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Typography variant="h6" sx={{ color: "#fff", fontWeight: 600 }}>Portfolio</Typography>
+        <Typography variant="h6" sx={{ color: "#fff", fontWeight: 600 }}>Srikanth Kumar Portfolio</Typography>
         <Box>
           {links.map((item, i) => (
             <Link

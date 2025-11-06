@@ -10,22 +10,18 @@ import {
 const techSkills = [
   { name: "HTML", value: 90 },
   { name: "CSS", value: 80 },
-  { name: "JavaScript", value: 70 },
-  { name: "Java", value: 65 },
-  { name: "Spring Boot", value: 80 },
-  { name: "Microservices", value: 85 },
-  { name: "Apache Kafka", value: 85 },
-  { name: "React", value: 50 },
-  { name: "GIT", value: 85 },
+  { name: "JavaScript", value: 80 },
+  { name: "React", value: 80 },
+  { name: "GIT", value: 90 },
   { name: "Node.js", value: 90 },
-  { name: "React Native", value: 80 },
+  { name: "React Native", value: 50 },
 ];
 
 const softSkills = [
   { name: "Creativity", value: 90 },
-  { name: "Communication", value: 85 },
-  { name: "Problem Solving", value: 75 },
-  { name: "Team Work", value: 90 },
+  { name: "Communication", value: 95 },
+  { name: "Problem Solving", value: 80 },
+  { name: "Team Work", value: 100 },
 ];
 
 const Skills = () => {
@@ -112,7 +108,7 @@ const Skills = () => {
                 value={100}
                 size={120}
                 thickness={5}
-                sx={{ color: "black" }}
+                sx={{ color: "#0ef" }}
               />
               <Box
                 sx={{
