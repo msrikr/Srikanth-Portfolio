@@ -5,6 +5,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { ThemeContext } from "@emotion/react";
 
 const Home = () => {
   useEffect(() => {
@@ -25,48 +26,88 @@ const Home = () => {
         minHeight: "80vh",
         display: "flex",
         alignItems: "center",
-        px: "10%",
+        justifyContent: "center",
+        flexDirection: { xs: "column", sm: "row" }, // mobile = stacked, desktop = row
+        px: { xs: "6%", sm: "10%" },
         backgroundColor: "#0a1b2c",
+        textAlign: { xs: "center", sm: "left" },
+        py: { xs: 6, sm: 0 },
       }}
     >
-      <Box sx={{ marginTop: "20px" }}>
-        <Typography variant="h5" sx={{ mb: 1 }}>
+      {/* LEFT SIDE CONTENT */}
+      <Box sx={{ flex: 1, mt: { xs: 2, sm: 0 } }}>
+        <Typography
+          variant="h5"
+          sx={{
+            mb: 1,
+            fontSize: { xs: "18px", sm: "22px" },
+            fontWeight: { xs: 400, sm: 500 },
+          }}
+        >
           Hello, It's
         </Typography>
-        <Typography variant="h3" sx={{ fontWeight: 700 }}>
+
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: { xs: 600, sm: 700 },
+            fontSize: { xs: "26px", sm: "40px", md: "48px" },
+            lineHeight: { xs: "34px", sm: "52px" },
+          }}
+        >
           Srikanth Kumar Maturu
         </Typography>
-        <Typography variant="h5" sx={{ mb: 2 }}>
-          And I'm a <span className="text" style={{ color: "#0ef" }}></span>
-        </Typography>
-        <Typography sx={{ fontSize: "18px", mb: 3 }}>
-          I'm a React.Js Developer. Developed interactive, responsive UIs using
-          React.js, Material UI, and modern JavaScript (ES6+). Built and
-          optimized reusable UI components for a scalable and maintainable
-          front-end architecture. Integrated front-end components with RESTful
-          APIs using Axios and React Query. Enhanced application performance and
-          load times by 30% through state management optimization (Redux,
-          Context API). Collaborated closely with UX/UI designers and backend
-          developers to ensure seamless API integration and consistent design
-          systems. Participated in Agile sprints, code reviews, and deployment
-          workflows using Git, AWS, and CI/CD pipelines.
+
+        <Typography
+          variant="h5"
+          sx={{
+            mb: 2,
+            fontSize: { xs: "18px", sm: "24px" },
+            fontWeight: { xs: 400, sm: 500 },
+          }}
+        >
+          And I'm a{" "}
+          <span className="text" style={{ color: "#0ef" }}></span>
         </Typography>
 
+        <Typography
+          sx={{
+            fontSize: { xs: "14px", sm: "16px" },
+            mb: 3,
+            lineHeight: { xs: "22px", sm: "26px" },
+          }}
+        >
+          I'm a React.Js Developer. Developed interactive, responsive UIs using
+          React.js, Material UI, and modern JavaScript (ES6+). Built and
+          optimized reusable UI components for scalable architectures. Integrated
+          front-end components with RESTful APIs using Axios and React Query.
+          Enhanced performance by 30% through optimized state management and
+          clean architecture patterns.
+        </Typography>
+
+        {/* SOCIAL ICONS */}
         <Box sx={{ mb: 2 }}>
-          <IconButton href="https://facebook.com" sx={{ color: "#0ef" }}>
-            <FacebookIcon />
+          <IconButton sx={{ color: "#0ef", fontSize: { xs: "18px", sm: "24px" } }}>
+            <FacebookIcon fontSize="inherit" />
           </IconButton>
-          <IconButton href="https://instagram.com" sx={{ color: "#0ef" }}>
-            <InstagramIcon />
+
+          <IconButton sx={{ color: "#0ef", fontSize: { xs: "18px", sm: "24px" } }}>
+            <InstagramIcon fontSize="inherit" />
           </IconButton>
-          <IconButton href="#" sx={{ color: "#0ef" }}>
-            <WhatsAppIcon />
+
+          <IconButton sx={{ color: "#0ef", fontSize: { xs: "18px", sm: "24px" } }}>
+            <WhatsAppIcon fontSize="inherit" />
           </IconButton>
-          <IconButton href="www.linkedin.com/in/srikanth-kumar-reddy-maturu" sx={{ color: "#0ef" }}>
-            <LinkedInIcon />
+
+          <IconButton
+            href="https://www.linkedin.com/in/srikanth-kumar-reddy-maturu"
+            sx={{ color: "#0ef", fontSize: { xs: "18px", sm: "24px" } }}
+          >
+            <LinkedInIcon fontSize="inherit" />
           </IconButton>
         </Box>
 
+        {/* CTA BUTTON */}
         <Button
           variant="contained"
           href="#about"
@@ -75,8 +116,9 @@ const Home = () => {
             backgroundColor: "#0ef",
             color: "#081b29",
             borderRadius: "40px",
-            px: 4,
-            py: 1.5,
+            px: { xs: 3, sm: 4 },
+            py: { xs: 1, sm: 1.5 },
+            fontSize: { xs: "14px", sm: "16px" },
             boxShadow: "0 0 25px #0ef",
             "&:hover": {
               backgroundColor: "#00ffff",
@@ -87,7 +129,9 @@ const Home = () => {
           More About Me
         </Button>
       </Box>
-      <Box component="span" sx={{ flex: 1 }}></Box>
+
+      {/* SPACING BOX FOR DESKTOP */}
+      <Box component="span" sx={{ flex: 1, display: { xs: "none", sm: "block" } }}></Box>
     </Box>
   );
 };

@@ -13,8 +13,12 @@ const techSkills = [
   { name: "JavaScript", value: 80 },
   { name: "React", value: 80 },
   { name: "GIT", value: 90 },
+  { name: "AWS", value: 70 },
   { name: "Node.js", value: 90 },
   { name: "React Native", value: 50 },
+  { name: "Material UI", value: 90 },
+  { name: "Taiwind CSS", value: 90 },
+  { name: "Next.Js", value: 60 },
 ];
 
 const softSkills = [
@@ -31,7 +35,8 @@ const Skills = () => {
       <Typography
         variant="h3"
         textAlign="center"
-        sx={{ textDecoration: "underline", textUnderlineOffset: "10px", mb: 6 }}
+        sx={{ textDecoration: "underline", textUnderlineOffset: "10px", mb: 6,fontSize: { xs: "26px", sm: "36px", md: "42px" },
+      fontWeight: 700, }}
       >
         Technical <span style={{ color: "#0ef" }}>Skills</span>
       </Typography>
@@ -78,6 +83,8 @@ const Skills = () => {
           textUnderlineOffset: "10px",
           mt: 10,
           mb: 6,
+          fontSize: { xs: "26px", sm: "36px", md: "42px" },
+      fontWeight: 700,
         }}
       >
         Professional <span style={{ color: "#0ef" }}>Skills</span>
@@ -94,22 +101,31 @@ const Skills = () => {
           >
             <Box sx={{ position: "relative", display: "inline-flex", mb: 2 }}>
               <CircularProgress
-                variant="determinate"
-                value={s.value}
-                size={120}
-                thickness={5}
-                sx={{
-                  color: "#0ef",
-                  position: "absolute",
-                }}
-              />
+    variant="determinate"
+    value={100}
+    size={120}
+    thickness={5}
+    sx={{
+      "& .MuiCircularProgress-circle": {
+        stroke: "black",
+        opacity: 0.3,
+      },
+    }}
+  />
               <CircularProgress
-                variant="determinate"
-                value={100}
-                size={120}
-                thickness={5}
-                sx={{ color: "black" }}
-              />
+    variant="determinate"
+    value={s.value}
+    size={120}
+    thickness={5}
+    sx={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      "& .MuiCircularProgress-circle": {
+        stroke: "#0ef",
+      },
+    }}
+  />
               <Box
                 sx={{
                   top: 0,

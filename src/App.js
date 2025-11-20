@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { Box, CssBaseline } from "@mui/material";
+import Certifications from "./components/Certifications";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <About />
         <Services />
         <Skills />
+        <Certifications/>
         <Contact />
         <Footer />
       </Box>
