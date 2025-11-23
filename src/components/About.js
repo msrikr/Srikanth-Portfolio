@@ -7,7 +7,7 @@ const About = () => {
     <Box
       id="about"
       sx={{
-        py: { xs: 8, sm: 10 },
+        py: { xs: 1, sm: 10 },
         px: { xs: "6%", sm: "10%" },
         textAlign: { xs: "center", md: "left" },
       }}
