@@ -15,25 +15,25 @@ const certifications = [
     issuer: "Johns Hopkins University",
     year: 2024,
     link: "https://www.coursera.org/account/accomplishments/specialization/certificate/L1C6NFJIF8ZE",
-},
-{
- title: "Frontend Apps with React ",
- issuer: "Meta",
- year: 2024,
- link: "https://www.coursera.org/account/accomplishments/certificate/KI223AWTR2E1",
-},
-{
-  title: "Backend Apps with Node.js and Express.js",
-  issuer: "IBM",
-  year: 2024,
-  link: "https://www.coursera.org/account/accomplishments/certificate/LWUGJ2L0SQDF",
-},
-{
-  title: "MongoDB: Developing Back-end Database Applications",
-  issuer: "IBM",
-  year: 2024,
-  link: "https://www.coursera.org/account/accomplishments/certificate/82TSCNWFGDJS",
-},
+  },
+  {
+    title: "Frontend Apps with React ",
+    issuer: "Meta",
+    year: 2024,
+    link: "https://www.coursera.org/account/accomplishments/certificate/KI223AWTR2E1",
+  },
+  {
+    title: "Backend Apps with Node.js and Express.js",
+    issuer: "IBM",
+    year: 2024,
+    link: "https://www.coursera.org/account/accomplishments/certificate/LWUGJ2L0SQDF",
+  },
+  {
+    title: "MongoDB: Developing Back-end Database Applications",
+    issuer: "IBM",
+    year: 2024,
+    link: "https://www.coursera.org/account/accomplishments/certificate/82TSCNWFGDJS",
+  },
   {
     title: "Google Project Management",
     issuer: "Google",
@@ -62,7 +62,7 @@ const Certifications = () => {
               sx={{
                 p: 3,
                 borderRadius: 3,
-                background: "#9ff",
+                background: (theme) => theme.palette.mode === "dark" ? "#0ef" : "#e0f7fa",
                 transition: "0.3s",
                 "&:hover": {
                   transform: "translateY(-6px)",

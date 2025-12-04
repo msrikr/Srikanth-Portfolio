@@ -1,13 +1,24 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Box, Link } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, Link, IconButton, Tooltip } from "@mui/material";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 
-const Header = () => {
+const Header = ({ mode = "dark", toggleTheme = () => { } }) => {
   const links = ["Home", "About", "Skills", "Certifications", "Contact"];
 
   return (
     <AppBar
       position="fixed"
-      sx={{ backgroundColor: "#051129", px: { xs: 2, sm: 4 }, py: 1, boxShadow: "none", zIndex: 1300 }}
+      sx={{
+        backgroundColor: (theme) =>
+          theme.palette.mode === "light"
+            ? theme.palette.primary.main
+            : theme.palette.background.default,
+        px: { xs: 2, sm: 4 },
+        py: 1,
+        boxShadow: "none",
+        zIndex: 1300,
+      }}
     >
       <Toolbar
         sx={{
@@ -38,9 +49,19 @@ const Header = () => {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: { xs: "flex-start", sm: "flex-end" },
+            alignItems: "center",
             mt: { xs: 1, sm: 0 },
           }}
-        >
+        ><Tooltip title={mode === "light" ? "Switch to dark" : "Switch to light"}>
+            <IconButton
+              onClick={toggleTheme}
+              sx={{ ml: { xs: 0, sm: 1 }, color: "#fff" }}
+              aria-label="toggle theme"
+              size="large"
+            >
+              {mode === "light" ? <Brightness4Icon /> : <Brightness7Icon />}
+            </IconButton>
+          </Tooltip>
           {links.map((item, i) => (
             <Link
               key={i}

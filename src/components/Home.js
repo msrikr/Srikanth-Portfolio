@@ -29,7 +29,7 @@ const Home = () => {
         justifyContent: "center",
         flexDirection: { xs: "column", sm: "row" }, // mobile = stacked, desktop = row
         px: { xs: "6%", sm: "10%" },
-        backgroundColor: "#0a1b2c",
+        backgroundColor: "background.default",
         textAlign: { xs: "center", sm: "left" },
         py: { xs: 6, sm: 0 },
       }}
@@ -67,7 +67,7 @@ const Home = () => {
           }}
         >
           And I'm a{" "}
-          <span className="text" style={{ color: "#0ef" }}></span>
+          <Box component="span" className="text" sx={{ color: "primary.main" }}></Box>
         </Typography>
 
         <Typography
@@ -87,21 +87,21 @@ const Home = () => {
 
         {/* SOCIAL ICONS */}
         <Box sx={{ mb: 2 }}>
-          <IconButton sx={{ color: "#0ef", fontSize: { xs: "18px", sm: "24px" } }}>
+          <IconButton sx={{ color: "primary.main", fontSize: { xs: "18px", sm: "24px" } }}>
             <FacebookIcon fontSize="inherit" />
           </IconButton>
 
-          <IconButton sx={{ color: "#0ef", fontSize: { xs: "18px", sm: "24px" } }}>
+          <IconButton sx={{ color: "primary.main", fontSize: { xs: "18px", sm: "24px" } }}>
             <InstagramIcon fontSize="inherit" />
           </IconButton>
 
-          <IconButton sx={{ color: "#0ef", fontSize: { xs: "18px", sm: "24px" } }}>
+          <IconButton sx={{ color: "primary.main", fontSize: { xs: "18px", sm: "24px" } }}>
             <WhatsAppIcon fontSize="inherit" />
           </IconButton>
 
           <IconButton
             href="https://www.linkedin.com/in/srikanth-kumar-reddy-maturu"
-            sx={{ color: "#0ef", fontSize: { xs: "18px", sm: "24px" } }}
+            sx={{ color: "primary.main", fontSize: { xs: "18px", sm: "24px" } }}
           >
             <LinkedInIcon fontSize="inherit" />
           </IconButton>
@@ -113,13 +113,13 @@ const Home = () => {
           href="#about"
           sx={{
             mt: 3,
-            backgroundColor: "#0ef",
-            color: "#081b29",
+            backgroundColor: "primary.main",
+            color: (theme) => theme.palette.mode === "light" ? "#fff" : "#081b29",
             borderRadius: "40px",
             px: { xs: 3, sm: 4 },
             py: { xs: 1, sm: 1.5 },
             fontSize: { xs: "14px", sm: "16px" },
-            boxShadow: "0 0 25px #0ef",
+            boxShadow: (theme) => `0 0 25px ${theme.palette.primary.main}`,
             "&:hover": {
               backgroundColor: "#00ffff",
               boxShadow: "0 0 50px cyan",
@@ -131,7 +131,7 @@ const Home = () => {
       </Box>
 
       {/* SPACING BOX FOR DESKTOP */}
-      <Box component="span" sx={{ flex: 1, display: { xs: "none", sm: "block" } }}></Box>
+      {/* <Box component="span" sx={{ flex: 1, display: { xs: "none", sm: "block" } }}></Box> */}
     </Box>
   );
 };

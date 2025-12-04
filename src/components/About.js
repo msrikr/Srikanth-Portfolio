@@ -27,14 +27,14 @@ const About = () => {
               fontWeight: 700,
             }}
           >
-            About <span style={{ color: "#0ef" }}>Me</span>
+            About <Box component="span" sx={{ color: "primary.main" }}>Me</Box>
           </Typography>
 
           <Typography
             variant="h5"
             sx={{
               my: 2,
-              color: "#fff",
+              color: (theme) => (theme.palette.mode === "light" ? "#000000" : theme.palette.text.primary),
               fontSize: { xs: "18px", sm: "22px" },
               fontWeight: { xs: 500, sm: 600 },
             }}
@@ -47,7 +47,7 @@ const About = () => {
               mb: 4,
               fontSize: { xs: "14px", sm: "16px", md: "18px" },
               lineHeight: { xs: "22px", sm: "26px" },
-              color: "aliceblue",
+              color: (theme) => (theme.palette.mode === "light" ? "#000000" : theme.palette.text.primary),
             }}
           >
             Full Stack Developer with 1 year of experience in creating scalable
@@ -62,13 +62,13 @@ const About = () => {
             variant="contained"
             href="#contact"
             sx={{
-              backgroundColor: "#0ef",
-              color: "#081b29",
+              backgroundColor: "primary.main",
+              color: (theme) => theme.palette.mode === "light" ? "#fff" : "#081b29",
               borderRadius: "40px",
               px: { xs: 3, sm: 4 },
               py: { xs: 1, sm: 1.5 },
               fontSize: { xs: "14px", sm: "16px" },
-              boxShadow: "0 0 25px #0ef",
+              boxShadow: (theme) => `0 0 25px ${theme.palette.primary.main}`,
               "&:hover": { boxShadow: "0 0 50px cyan" },
             }}
           >
