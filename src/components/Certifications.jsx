@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Grid,
-  Paper,
-  Typography,
-  Button,
-  Stack,
-} from "@mui/material";
+import { Box, Grid, Paper, Typography, Button, Stack } from "@mui/material";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 
 const certifications = [
@@ -14,43 +7,38 @@ const certifications = [
     title: "HTML, CSS, and Javascript for Web Developers",
     issuer: "Johns Hopkins University",
     year: 2024,
-    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/L1C6NFJIF8ZE",
+    pdf: "/certificates/Coursera L1C6NFJIF8ZE.pdf",
   },
   {
     title: "Frontend Apps with React ",
     issuer: "Meta",
     year: 2024,
-    link: "https://www.coursera.org/account/accomplishments/certificate/KI223AWTR2E1",
+    pdf: "/certificates/Coursera KI223AWTR2E1.pdf",
   },
   {
     title: "Backend Apps with Node.js and Express.js",
     issuer: "IBM",
     year: 2024,
-    link: "https://www.coursera.org/account/accomplishments/certificate/LWUGJ2L0SQDF",
+    pdf: "/certificates/Coursera LWUGJ2L0SQDF.pdf",
   },
   {
     title: "MongoDB: Developing Back-end Database Applications",
     issuer: "IBM",
     year: 2024,
-    link: "https://www.coursera.org/account/accomplishments/certificate/82TSCNWFGDJS",
+    pdf: "/certificates/Coursera 82TSCNWFGDJS.pdf",
   },
   {
     title: "Google Project Management",
     issuer: "Google",
     year: 2025,
-    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/L51G2L7HD8FQ",
+    pdf: "/certificates/Coursera L51G2L7HD8FQ.pdf",
   },
 ];
 
 const Certifications = () => {
   return (
     <Box id="certifications" sx={{ py: 6, px: { xs: 2, sm: 6, md: 10 } }}>
-
-      <Typography
-        variant="h4"
-        align="center"
-        sx={{ mb: 4, fontWeight: 700 }}
-      >
+      <Typography variant="h4" align="center" sx={{ mb: 4, fontWeight: 700 }}>
         Certifications
       </Typography>
 
@@ -62,7 +50,8 @@ const Certifications = () => {
               sx={{
                 p: 3,
                 borderRadius: 3,
-                background: (theme) => theme.palette.mode === "dark" ? "#0ef" : "#e0f7fa",
+                background: (theme) =>
+                  theme.palette.mode === "dark" ? "#0ef" : "#e0f7fa",
                 transition: "0.3s",
                 "&:hover": {
                   transform: "translateY(-6px)",
@@ -72,7 +61,11 @@ const Certifications = () => {
             >
               <Stack direction="row" spacing={2} alignItems="center">
                 <WorkspacePremiumIcon
-                  sx={{ fontSize: 50, color: "primary.main" }}
+                  sx={{
+                    fontSize: 50,
+                    color: (theme) =>
+                      theme.palette.mode === "dark" ? "#000" : "primary.main",
+                  }}
                 />
 
                 <Box>
@@ -86,7 +79,7 @@ const Certifications = () => {
                   <Button
                     variant="contained"
                     size="small"
-                    href={cert.link}
+                    href={cert.pdf || cert.link}
                     target="_blank"
                     sx={{
                       mt: 2,

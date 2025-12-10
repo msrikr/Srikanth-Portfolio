@@ -73,8 +73,9 @@ const Header = ({ mode = "dark", toggleTheme = () => { } }) => {
             sx={{
               color: "#fff",
               fontWeight: 600,
-              fontSize: { xs: "18px", sm: "20px" },
-              flexGrow: { xs: 1, md: 0 },
+              fontSize: { xs: "14px", sm: "20px" },
+              flexGrow: 1, // Pushes desktop links/mobile icon to the right
+              textAlign: "left",
             }}
           >
             Srikanth Kumar Portfolio

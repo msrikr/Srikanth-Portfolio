@@ -10,11 +10,14 @@ const Footer = () => {
           textAlign: "center",
           py: 3,
           mt: 10,
-          backgroundColor: "rgb(7, 85, 91)",
+          backgroundColor: (theme) =>
+            theme.palette.mode === "light"
+              ? theme.palette.primary.main
+              : "rgb(7, 85, 91)",
           px: 2
         }}
       >
-        <Typography>Designed and Developed by Srikanth Kumar Maturu</Typography>
+        <Typography variant="h6" sx={{ color: "#fff", fontWeight: 600 }}>Designed and Developed by Srikanth Kumar Maturu</Typography>
       </Box>
 
       <IconButton
