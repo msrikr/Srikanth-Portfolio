@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Button, Grid } from "@mui/material";
-import kingImg from "../images/king.png";
+
 
 const About = () => {
   return (
@@ -80,13 +80,17 @@ const About = () => {
         <Grid item xs={12} md={6}>
           <Box
             component="img"
-            src={kingImg}
+            src="/profile/Srikanth.webp"
             alt="Profile"
             sx={{
-              width: { xs: "60%", sm: "70%", md: "75%" },
+              width: { xs: "50%", sm: "55%", md: "60%" },
+              aspectRatio: "1/1",
+              objectFit: "cover",
               margin: "0 auto",
-              borderRadius: "80px",
+              borderRadius: "50%",
               display: "block",
+              border: "4px solid #0ef",
+              boxShadow: "0 0 20px #0ef"
             }}
           />
         </Grid>

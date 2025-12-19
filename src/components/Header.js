@@ -11,7 +11,8 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemText
+  ListItemText,
+  Avatar
 } from "@mui/material";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
@@ -68,18 +69,29 @@ const Header = ({ mode = "dark", toggleTheme = () => { } }) => {
           </IconButton>
 
           {/* Portfolio Name */}
-          <Typography
-            variant="h6"
-            sx={{
-              color: "#fff",
-              fontWeight: 600,
-              fontSize: { xs: "14px", sm: "20px" },
-              flexGrow: 1, // Pushes desktop links/mobile icon to the right
-              textAlign: "left",
-            }}
-          >
-            Srikanth Kumar Portfolio
-          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, flexGrow: 1 }}>
+            <Avatar
+              src="/profile/Srikanth.webp"
+              alt="Srikanth Kumar"
+              sx={{
+                width: { xs: 30, sm: 40 },
+                height: { xs: 30, sm: 40 },
+                border: "2px solid #0ef",
+                boxShadow: "0 0 10px #0ef"
+              }}
+            />
+            <Typography
+              variant="h6"
+              sx={{
+                color: "#fff",
+                fontWeight: 600,
+                fontSize: { xs: "14px", sm: "20px" },
+                textAlign: "left",
+              }}
+            >
+              Srikanth Kumar Portfolio
+            </Typography>
+          </Box>
 
           {/* Desktop Navigation Links */}
           <Box
