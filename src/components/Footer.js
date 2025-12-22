@@ -17,7 +17,7 @@ const Footer = () => {
           px: 2
         }}
       >
-        <Typography variant="h6" sx={{ color: "#fff", fontWeight: 600 }}>Designed and Developed by Srikanth Kumar Maturu</Typography>
+        <Typography sx={{ color: "#fff", fontWeight: 600 }}>Designed and Developed by Srikanth Kumar Maturu</Typography>
       </Box>
 
       <IconButton

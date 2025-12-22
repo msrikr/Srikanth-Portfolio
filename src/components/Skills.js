@@ -8,17 +8,20 @@ import {
 } from "@mui/material";
 
 const techSkills = [
-  { name: "HTML", value: 90 },
-  { name: "CSS", value: 80 },
-  { name: "JavaScript", value: 80 },
-  { name: "React", value: 80 },
-  { name: "GIT", value: 90 },
-  { name: "AWS", value: 70 },
-  { name: "Node.js", value: 90 },
-  { name: "React Native", value: 50 },
-  { name: "Material UI", value: 90 },
-  { name: "Tailwind CSS", value: 90 },
-  { name: "Next.Js", value: 60 },
+  { name: "React", value: 80, color: "#61DAFB" },
+  { name: "Next.Js", value: 60, color: "#FFFFFF" },
+  { name: "Redux", value: 70, color: "#764ABC" },
+  { name: "JavaScript", value: 80, color: "#F7DF1E" },
+  { name: "HTML", value: 90, color: "#E34F26" },
+  { name: "CSS", value: 80, color: "#1572B6" },
+  { name: "Tailwind CSS", value: 90, color: "#06B6D4" },
+  { name: "Material UI", value: 90, color: "#007FFF" },
+  { name: "Node.js", value: 90, color: "#339933" },
+  { name: "Express.js", value: 90, color: "#FFFFFF" },
+  { name: "MongoDB", value: 90, color: "#47A248" },
+  { name: "MySQL", value: 70, color: "#4479A1" },
+  { name: "AWS", value: 70, color: "#FF9900" },
+  { name: "GIT", value: 90, color: "#F05032" },
 ];
 
 const softSkills = [
@@ -30,47 +33,68 @@ const softSkills = [
 
 const Skills = () => {
   return (
-    <Box id="skills" sx={{ py: 10, px: "10%" }}>
+    <Box id="skills" sx={{ py: 10, px: { xs: "6%", sm: "10%" } }}>
       {/* Technical Skills */}
       <Typography
         variant="h3"
         textAlign="center"
         sx={{
-          textDecoration: "underline", textUnderlineOffset: "10px", mb: 6, fontSize: { xs: "26px", sm: "36px", md: "42px" },
+          mb: 8,
+          fontSize: { xs: "30px", sm: "36px", md: "42px" },
           fontWeight: 700,
         }}
       >
-        Technical <Box component="span" sx={{ color: "primary.main" }}>Skills</Box>
+        Technical <Box component="span" sx={{ color: "primary.main" }}>Expertise</Box>
       </Typography>
 
-      <Grid container spacing={3}>
+      <Grid container spacing={4}>
         {techSkills.map((skill, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
-            <Typography sx={{ mb: 1, fontWeight: 500 }}>{skill.name}</Typography>
-            <Box sx={{ position: "relative", mb: 3 }}>
-              <LinearProgress
-                variant="determinate"
-                value={skill.value}
-                sx={{
-                  height: 8,
-                  borderRadius: 5,
-                  backgroundColor: "#000",
-                  "& .MuiLinearProgress-bar": {
-                    backgroundColor: "#0ef",
-                  },
-                }}
-              />
-              <Typography
-                sx={{
-                  position: "absolute",
-                  right: 0,
-                  top: -25,
-                  fontSize: "12px",
-                  color: "text.primary",
-                }}
-              >
-                {skill.value}%
+          <Grid item xs={12} sm={6} md={3} key={i}>
+            <Box
+              sx={{
+                p: 3,
+                height: "100%",
+                backgroundColor: "rgba(255, 255, 255, 0.05)",
+                backdropFilter: "blur(10px)",
+                borderRadius: 4,
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                transition: "0.3s",
+                "&:hover": {
+                  transform: "translateY(-5px)",
+                  borderColor: skill.color,
+                  boxShadow: `0 10px 20px ${skill.color}33`,
+                },
+              }}
+            >
+              <Typography sx={{ mb: 2, fontWeight: 600, fontSize: "16px", letterSpacing: "0.5px" }}>
+                {skill.name}
               </Typography>
+              <Box sx={{ position: "relative" }}>
+                <LinearProgress
+                  variant="determinate"
+                  value={skill.value}
+                  sx={{
+                    height: 6,
+                    borderRadius: 5,
+                    backgroundColor: "rgba(0,0,0,0.3)",
+                    "& .MuiLinearProgress-bar": {
+                      backgroundColor: skill.color,
+                      borderRadius: 5,
+                    },
+                  }}
+                />
+                <Typography
+                  sx={{
+                    textAlign: "right",
+                    mt: 1,
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    color: skill.color,
+                  }}
+                >
+                  {skill.value}%
+                </Typography>
+              </Box>
             </Box>
           </Grid>
         ))}
@@ -81,15 +105,13 @@ const Skills = () => {
         variant="h3"
         textAlign="center"
         sx={{
-          textDecoration: "underline",
-          textUnderlineOffset: "10px",
           mt: 10,
-          mb: 6,
-          fontSize: { xs: "26px", sm: "36px", md: "42px" },
+          mb: 8,
+          fontSize: { xs: "30px", sm: "36px", md: "42px" },
           fontWeight: 700,
         }}
       >
-        Professional <Box component="span" sx={{ color: "primary.main" }}>Skills</Box>
+        Professional <Box component="span" sx={{ color: "primary.main" }}>Attributes</Box>
       </Typography>
 
       <Grid container spacing={5} justifyContent="center">
@@ -101,30 +123,43 @@ const Skills = () => {
             key={i}
             sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
           >
-            <Box sx={{ position: "relative", display: "inline-flex", mb: 2 }}>
+            <Box
+              sx={{
+                position: "relative",
+                display: "inline-flex",
+                mb: 2,
+                p: 1.5,
+                borderRadius: "50%",
+                background: "rgba(255, 255, 255, 0.03)",
+                boxShadow: "0 0 20px rgba(0, 238, 255, 0.1)",
+                transition: "0.3s",
+                "&:hover": {
+                  boxShadow: "0 0 30px rgba(0, 238, 255, 0.3)",
+                  transform: "scale(1.05)",
+                }
+              }}
+            >
               <CircularProgress
                 variant="determinate"
                 value={100}
-                size={120}
-                thickness={5}
+                size={100}
+                thickness={4}
                 sx={{
-                  "& .MuiCircularProgress-circle": {
-                    stroke: "black",
-                    opacity: 0.3,
-                  },
+                  color: "rgba(255, 255, 255, 0.1)",
                 }}
               />
               <CircularProgress
                 variant="determinate"
                 value={s.value}
-                size={120}
-                thickness={5}
+                size={100}
+                thickness={4}
                 sx={{
                   position: "absolute",
-                  top: 0,
-                  left: 0,
+                  top: 12,
+                  left: 12,
                   "& .MuiCircularProgress-circle": {
-                    stroke: (theme) => theme.palette.primary.main,
+                    stroke: "#0ef",
+                    strokeLinecap: "round",
                   },
                 }}
               />
@@ -140,10 +175,12 @@ const Skills = () => {
                   justifyContent: "center",
                 }}
               >
-                <Typography sx={{ fontWeight: 600 }}>{s.value}%</Typography>
+                <Typography sx={{ fontWeight: 700, fontSize: "18px", color: "#0ef" }}>{s.value}%</Typography>
               </Box>
             </Box>
-            <Typography sx={{ fontWeight: 500 }}>{s.name}</Typography>
+            <Typography sx={{ fontWeight: 600, mt: 1, letterSpacing: "1px", textTransform: "uppercase", fontSize: "14px" }}>
+              {s.name}
+            </Typography>
           </Grid>
         ))}
       </Grid>

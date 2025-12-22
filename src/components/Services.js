@@ -1,17 +1,33 @@
 import React from "react";
 import { Box, Typography, Grid, Paper, Button } from "@mui/material";
-import CodeIcon from "@mui/icons-material/Code";
-import IntegrationInstructionsIcon from "@mui/icons-material/IntegrationInstructions";
-import MemoryIcon from "@mui/icons-material/Memory";
+import PublicIcon from "@mui/icons-material/Public";
+import PortfoliioIcon from "@mui/icons-material/AccountBox";
+import GroupsIcon from "@mui/icons-material/Groups";
+
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Services = () => {
-  const services = [
-    { icon: <CodeIcon sx={{ fontSize: 50 }} />, title: "React.Js Developer" },
+  const projects = [
     {
-      icon: (
-        <IntegrationInstructionsIcon sx={{ fontSize: 50, color: "#00eeff" }} />
-      ),
-      title: "MERN Stack Developer",
+      icon: <PublicIcon sx={{ fontSize: 50, color: "#00eeff" }} />,
+      title: "Servigo - Local Services Marketplace",
+      description: "A comprehensive MERN stack platform connecting local service providers with customers. Features real-time bookings, provider verification, and a robust admin dashboard.",
+      liveLink: "https://servigo-pi.vercel.app/",
+      githubLink: "https://github.com/srikanth-kumar-reddy-maturu",
+    },
+    {
+      icon: <PortfoliioIcon sx={{ fontSize: 50, color: "#00eeff" }} />,
+      title: "Interactive Portfolio Website",
+      description: "A premium, responsive portfolio built with React and Material UI. Showcases projects with a dynamic design, featuring theme switching and seamless animations.",
+      liveLink: "https://srikanth-portfolio-navy.vercel.app/",
+      githubLink: "https://github.com/srikanth-kumar-reddy-maturu",
+    },
+    {
+      icon: <GroupsIcon sx={{ fontSize: 50, color: "#00eeff" }} />,
+      title: "Real-Time Collaborative Workspace",
+      description: "A feature-rich collaboration tool with live chat and document editing. Built using Socket.io and React to ensure instantaneous synchronization across users.",
+      liveLink: "https://github.com/srikanth-kumar-reddy-maturu", // Placeholder
+      githubLink: "https://github.com/srikanth-kumar-reddy-maturu",
     },
   ];
 
@@ -39,8 +55,8 @@ const Services = () => {
         spacing={{ xs: 3, sm: 4 }}
         sx={{ mt: { xs: 3, sm: 5 } }}
       >
-        {services.map((s, i) => (
-          <Grid item xs={12} md={6} key={i}>
+        {projects.map((p, i) => (
+          <Grid item xs={12} sm={6} md={4} key={i}>
             <Paper
               sx={{
                 p: { xs: 3, sm: 4 },
@@ -61,7 +77,7 @@ const Services = () => {
                   mb: 2,
                 }}
               >
-                {s.icon}
+                {p.icon}
               </Box>
 
               <Typography
@@ -73,7 +89,7 @@ const Services = () => {
                   color: (theme) => (theme.palette.mode === "light" ? "#000000" : theme.palette.text.primary),
                 }}
               >
-                {s.title}
+                {p.title}
               </Typography>
 
               <Typography
@@ -86,27 +102,38 @@ const Services = () => {
                   color: (theme) => (theme.palette.mode === "light" ? "#000000" : theme.palette.text.primary),
                 }}
               >
-                Developed interactive, responsive UIs using React.js, Material UI,
-                and modern JavaScript (ES6+). Built and optimized reusable UI
-                components for a scalable and maintainable architecture. Optimized
-                application performance and collaborated closely with designers and
-                backend teams for smooth integration.
+                {p.description}
               </Typography>
 
-              <Button
-                variant="contained"
-                sx={{
-                  backgroundColor: "primary.main",
-                  color: (theme) => theme.palette.mode === "light" ? "#fff" : "#001b29",
-                  borderRadius: "40px",
-                  px: { xs: 3, sm: 4 },
-                  py: { xs: 1, sm: 1.2 },
-                  fontSize: { xs: "14px", sm: "16px" },
-                  "&:hover": { backgroundColor: "#00ffff" },
-                }}
-              >
-                Learn More
-              </Button>
+              <Box sx={{ display: "flex", gap: 2, justifyContent: "center" }}>
+                <Button
+                  variant="outlined"
+                  href={p.githubLink}
+                  target="_blank"
+                  startIcon={<GitHubIcon />}
+                  sx={{
+                    borderColor: "primary.main",
+                    color: "primary.main",
+                    borderRadius: "40px",
+                    "&:hover": { borderColor: "#00ffff", color: "#00ffff" },
+                  }}
+                >
+                  GitHub
+                </Button>
+                <Button
+                  variant="contained"
+                  href={p.liveLink}
+                  target="_blank"
+                  sx={{
+                    backgroundColor: "primary.main",
+                    color: (theme) => theme.palette.mode === "light" ? "#fff" : "#001b29",
+                    borderRadius: "40px",
+                    "&:hover": { backgroundColor: "#00ffff" },
+                  }}
+                >
+                  Live Demo
+                </Button>
+              </Box>
             </Paper>
           </Grid>
         ))}

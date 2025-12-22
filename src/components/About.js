@@ -42,38 +42,54 @@ const About = () => {
             React.Js Developer!
           </Typography>
 
-          <Typography
-            sx={{
-              mb: 4,
-              fontSize: { xs: "14px", sm: "16px", md: "18px" },
-              lineHeight: { xs: "22px", sm: "26px" },
-              color: (theme) => (theme.palette.mode === "light" ? "#000000" : theme.palette.text.primary),
-            }}
-          >
-            Full Stack Developer with 1 year of experience in creating scalable
-            web applications using the MERN Stack (MongoDB, Express.js,
-            React.js, Node.js). Skilled in agile development and cloud
-            deployment, with a focus on delivering user-centric software
-            solutions. Proven ability to collaborate effectively in team
-            environments to solve complex problems.
-          </Typography>
-
-          <Button
-            variant="contained"
-            href="#contact"
-            sx={{
-              backgroundColor: "primary.main",
-              color: (theme) => theme.palette.mode === "light" ? "#fff" : "#081b29",
-              borderRadius: "40px",
-              px: { xs: 3, sm: 4 },
-              py: { xs: 1, sm: 1.5 },
-              fontSize: { xs: "14px", sm: "16px" },
-              boxShadow: (theme) => `0 0 25px ${theme.palette.primary.main}`,
-              "&:hover": { boxShadow: "0 0 50px cyan" },
-            }}
-          >
-            More About Me
-          </Button>
+          <Typography>As a results-driven Full Stack Developer with specialized expertise in the
+            MERN Stack (MongoDB, Express.js, React.js, Node.js), I focus on engineering
+            scalable, high-impact web solutions. Over the past year, I have refined my
+            skills in architecting clean, maintainable codebases and implementing
+            user-centric designs that prioritize performance and accessibility. I am
+            deeply committed to agile development practices and cloud-native deployments,
+            consistently collaborating with cross-functional teams to solve complex
+            technical challenges and deliver polished, production-ready applications.</Typography>
+          <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", justifyContent: { xs: "center", sm: "flex-start" } }}>
+            <Button
+              variant="contained"
+              href="#contact"
+              sx={{
+                backgroundColor: "primary.main",
+                color: (theme) => theme.palette.mode === "light" ? "#fff" : "#081b29",
+                borderRadius: "40px",
+                px: { xs: 3, sm: 4 },
+                py: { xs: 1, sm: 1.5 },
+                mt: 2,
+                fontSize: { xs: "14px", sm: "16px" },
+                boxShadow: (theme) => `0 0 25px ${theme.palette.primary.main}`,
+                "&:hover": { boxShadow: "0 0 50px cyan" },
+              }}
+            >
+              More About Me
+            </Button>
+            <Button
+              variant="outlined"
+              href="/resume/Srikanth Kumar.pdf"
+              target="_blank"
+              sx={{
+                mt: 3,
+                borderColor: "primary.main",
+                color: "primary.main",
+                borderRadius: "40px",
+                px: { xs: 3, sm: 4 },
+                py: { xs: 1, sm: 1.5 },
+                fontSize: { xs: "14px", sm: "16px" },
+                "&:hover": {
+                  borderColor: "#00ffff",
+                  color: "#00ffff",
+                  boxShadow: "0 0 25px rgba(0, 255, 255, 0.3)",
+                },
+              }}
+            >
+              Download Resume
+            </Button>
+          </Box>
         </Grid>
 
         {/* RIGHT IMAGE SECTION */}

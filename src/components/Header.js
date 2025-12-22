@@ -12,7 +12,8 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
-  Avatar
+  Avatar,
+  Button
 } from "@mui/material";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
@@ -127,6 +128,23 @@ const Header = ({ mode = "dark", toggleTheme = () => { } }) => {
                 {item}
               </Link>
             ))}
+            <Button
+              variant="outlined"
+              href="/resume/Srikanth Kumar.pdf"
+              target="_blank"
+              sx={{
+                color: "#0ef",
+                borderColor: "#0ef",
+                ml: 2,
+                borderRadius: "20px",
+                "&:hover": {
+                  backgroundColor: "rgba(14, 239, 255, 0.1)",
+                  borderColor: "#0ef",
+                },
+              }}
+            >
+              Resume
+            </Button>
           </Box>
 
           {/* Mobile Theme Toggle */}
@@ -196,6 +214,31 @@ const Header = ({ mode = "dark", toggleTheme = () => { } }) => {
               </ListItemButton>
             </ListItem>
           ))}
+          <ListItem disablePadding>
+            <ListItemButton
+              component="a"
+              href="/resume/Srikanth Kumar.pdf"
+              target="_blank"
+              sx={{
+                backgroundColor: "rgba(14, 239, 255, 0.1)",
+                mt: 1,
+                "&:hover": {
+                  backgroundColor: "rgba(14, 239, 255, 0.2)",
+                },
+              }}
+            >
+              <ListItemText
+                primary="Resume"
+                sx={{
+                  color: "#0ef",
+                  "& .MuiTypography-root": {
+                    fontSize: "18px",
+                    fontWeight: 600,
+                  },
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
         </List>
       </Drawer>
     </>

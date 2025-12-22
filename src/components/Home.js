@@ -70,20 +70,14 @@ const Home = () => {
           <Box component="span" className="text" sx={{ color: "primary.main" }}></Box>
         </Typography>
 
-        <Typography
-          sx={{
-            fontSize: { xs: "14px", sm: "16px" },
-            mb: 3,
-            lineHeight: { xs: "22px", sm: "26px" },
-          }}
-        >
-          I'm a React.Js Developer. Developed interactive, responsive UIs using
-          React.js, Material UI, and modern JavaScript (ES6+). Built and
-          optimized reusable UI components for scalable architectures. Integrated
-          front-end components with RESTful APIs using Axios and React Query.
-          Enhanced performance by 30% through optimized state management and
-          clean architecture patterns.
-        </Typography>
+        I am a passionate React.js Developer dedicated to architecting high-performance,
+        user-centric web interfaces. Specializing in the MERN stack, I transform complex
+        requirements into seamless, responsive digital experiences using React.js,
+        Material UI, and modern ES6+. By leveraging tools like React Query and Redux
+        for robust state management, I've consistently optimized application performance
+        by over 30%. I thrive on building scalable UI architectures and integrating
+        sophisticated front-end components with secure RESTful APIs to deliver
+        exceptional value to users and stakeholders.
 
         {/* SOCIAL ICONS */}
         <Box sx={{ mb: 2 }}>
@@ -107,27 +101,29 @@ const Home = () => {
           </IconButton>
         </Box>
 
-        {/* CTA BUTTON */}
-        <Button
-          variant="contained"
-          href="#about"
-          sx={{
-            mt: 3,
-            backgroundColor: "primary.main",
-            color: (theme) => theme.palette.mode === "light" ? "#fff" : "#081b29",
-            borderRadius: "40px",
-            px: { xs: 3, sm: 4 },
-            py: { xs: 1, sm: 1.5 },
-            fontSize: { xs: "14px", sm: "16px" },
-            boxShadow: (theme) => `0 0 25px ${theme.palette.primary.main}`,
-            "&:hover": {
-              backgroundColor: "#00ffff",
-              boxShadow: "0 0 50px cyan",
-            },
-          }}
-        >
-          More About Me
-        </Button>
+        {/* CTA BUTTONS */}
+        <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", justifyContent: { xs: "center", sm: "flex-start" } }}>
+          <Button
+            variant="contained"
+            href="#about"
+            sx={{
+              mt: 3,
+              backgroundColor: "primary.main",
+              color: (theme) => theme.palette.mode === "light" ? "#fff" : "#081b29",
+              borderRadius: "40px",
+              px: { xs: 3, sm: 4 },
+              py: { xs: 1, sm: 1.5 },
+              fontSize: { xs: "14px", sm: "16px" },
+              boxShadow: (theme) => `0 0 25px ${theme.palette.primary.main}`,
+              "&:hover": {
+                backgroundColor: "#00ffff",
+                boxShadow: "0 0 50px cyan",
+              },
+            }}
+          >
+            More About Me
+          </Button>
+        </Box>
       </Box>
 
       {/* SPACING BOX FOR DESKTOP */}
