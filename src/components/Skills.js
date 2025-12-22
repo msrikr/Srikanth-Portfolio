@@ -54,15 +54,20 @@ const Skills = () => {
               sx={{
                 p: 3,
                 height: "100%",
-                backgroundColor: "rgba(255, 255, 255, 0.05)",
+                backgroundColor: (theme) =>
+                  theme.palette.mode === "light"
+                    ? "rgba(0, 0, 0, 0.04)"
+                    : "rgba(255, 255, 255, 0.05)",
                 backdropFilter: "blur(10px)",
                 borderRadius: 4,
-                border: "1px solid rgba(255, 255, 255, 0.1)",
+                border: (theme) =>
+                  `1px solid ${theme.palette.mode === "light" ? "rgba(0,0,0,0.1)" : "rgba(255,255,255,0.1)"}`,
                 transition: "0.3s",
                 "&:hover": {
                   transform: "translateY(-5px)",
                   borderColor: skill.color,
-                  boxShadow: `0 10px 20px ${skill.color}33`,
+                  boxShadow: (theme) =>
+                    `0 10px 20px ${skill.color}${theme.palette.mode === "light" ? "44" : "33"}`,
                 },
               }}
             >
@@ -130,11 +135,16 @@ const Skills = () => {
                 mb: 2,
                 p: 1.5,
                 borderRadius: "50%",
-                background: "rgba(255, 255, 255, 0.03)",
-                boxShadow: "0 0 20px rgba(0, 238, 255, 0.1)",
+                background: (theme) =>
+                  theme.palette.mode === "light"
+                    ? "rgba(0, 0, 0, 0.03)"
+                    : "rgba(255, 255, 255, 0.03)",
+                boxShadow: (theme) =>
+                  `0 0 20px ${theme.palette.mode === "light" ? "rgba(0,0,0,0.05)" : "rgba(0, 238, 255, 0.1)"}`,
                 transition: "0.3s",
                 "&:hover": {
-                  boxShadow: "0 0 30px rgba(0, 238, 255, 0.3)",
+                  boxShadow: (theme) =>
+                    `0 0 30px ${theme.palette.mode === "light" ? "rgba(0,0,0,0.1)" : "rgba(0, 238, 255, 0.3)"}`,
                   transform: "scale(1.05)",
                 }
               }}
