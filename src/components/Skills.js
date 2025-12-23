@@ -12,6 +12,7 @@ const techSkills = [
   { name: "Next.Js", value: 60, color: "#FFFFFF" },
   { name: "Redux", value: 70, color: "#764ABC" },
   { name: "JavaScript", value: 80, color: "#F7DF1E" },
+  { name: "TypeScript", value: 70, color: "#3178C6" },
   { name: "HTML", value: 90, color: "#E34F26" },
   { name: "CSS", value: 80, color: "#1572B6" },
   { name: "Tailwind CSS", value: 90, color: "#06B6D4" },
