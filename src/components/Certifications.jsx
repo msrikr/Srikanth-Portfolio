@@ -4,12 +4,6 @@ import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 
 const certifications = [
   {
-    title: "HTML, CSS, and Javascript for Web Developers",
-    issuer: "Johns Hopkins University",
-    year: 2024,
-    pdf: "/certificates/Coursera L1C6NFJIF8ZE.pdf",
-  },
-  {
     title: "Frontend Apps with React ",
     issuer: "Meta",
     year: 2024,
@@ -22,16 +16,34 @@ const certifications = [
     pdf: "/certificates/Coursera LWUGJ2L0SQDF.pdf",
   },
   {
-    title: "MongoDB: Developing Back-end Database Applications",
-    issuer: "IBM",
-    year: 2024,
-    pdf: "/certificates/Coursera 82TSCNWFGDJS.pdf",
-  },
-  {
     title: "Google Project Management",
     issuer: "Google",
     year: 2025,
     pdf: "/certificates/Coursera L51G2L7HD8FQ.pdf",
+  },
+  {
+    title: "AWS Cloud Solutions Architect",
+    issuer: "AWS",
+    year: 2025,
+    pdf: "/certificates/Coursera 2MZFTX1D1Z2H.pdf",
+  },
+  {
+    title: "Google AI Essentials",
+    issuer: "Google",
+    year: 2025,
+    pdf: "/certificates/Coursera WCTFTXK3D5JH.pdf",
+  },
+  {
+    title: "HTML, CSS, and Javascript for Web Developers",
+    issuer: "Johns Hopkins University",
+    year: 2024,
+    pdf: "/certificates/Coursera L1C6NFJIF8ZE.pdf",
+  },
+  {
+    title: "MongoDB: Developing Back-end Database Applications",
+    issuer: "IBM",
+    year: 2024,
+    pdf: "/certificates/Coursera 82TSCNWFGDJS.pdf",
   },
 ];
 
