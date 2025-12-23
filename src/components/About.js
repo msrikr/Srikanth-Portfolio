@@ -70,7 +70,7 @@ const About = () => {
             </Button>
             <Button
               variant="outlined"
-              href="/resume/Srikanth Kumar.pdf"
+              href="/resume/Srikanth Kumar M.pdf"
               target="_blank"
               sx={{
                 mt: 3,

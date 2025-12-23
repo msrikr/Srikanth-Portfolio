@@ -130,7 +130,7 @@ const Header = ({ mode = "dark", toggleTheme = () => { } }) => {
             ))}
             <Button
               variant="outlined"
-              href="/resume/Srikanth Kumar.pdf"
+              href="/resume/Srikanth Kumar M.pdf"
               target="_blank"
               sx={{
                 color: "#0ef",
@@ -217,7 +217,7 @@ const Header = ({ mode = "dark", toggleTheme = () => { } }) => {
           <ListItem disablePadding>
             <ListItemButton
               component="a"
-              href="/resume/Srikanth Kumar.pdf"
+              href="/resume/Srikanth Kumar M.pdf"
               target="_blank"
               sx={{
                 backgroundColor: "rgba(14, 239, 255, 0.1)",
